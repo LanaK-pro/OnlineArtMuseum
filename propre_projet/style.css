@@ -1,3 +1,37 @@
+.titlePage {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px; /* Reduced width */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.artDisplay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.credit {
+  text-align: center;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+}
+
 img {
   width: 30%;
   height: 30%;

@@ -33,65 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector('nav a[data-page="home"]').click();
   */
 
-  //first painting
-  fetch(
-    `https://www.artic.edu/iiif/2/b272df73-a965-ac37-4172-be4e99483637/full/843,/0/default.jpg
-    `,
-    {
-      method: "GET",
-    },
-  ).then(function (response) {
-    document.getElementById("artworkOne").src = response.url;
-  });
-  //Description
-  /* fetch("https://api.artic.edu/api/v1/artworks/6565?fields=description", {
-    method: "GET",
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (object) {
-      console.log(object);
-      document.getElementById("artworkOneLegend").innerHTML =
-        object.data.description;
-    }); */
-
-  //Alt description
-
-  fetch("https://api.artic.edu/api/v1/artworks/6565?fields=thumbnail", {
-    method: "GET",
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (object) {
-      document.getElementById("artworkOne").alt =
-        object.data.thumbnail.alt_text;
-    });
-
-  //Title
-  fetch("https://api.artic.edu/api/v1/artworks/6565?fields=title", {
-    method: "GET",
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (object) {
-      document.getElementById("titleOne").innerText = object.data.title;
-    });
-
-  //Date
-  fetch("https://api.artic.edu/api/v1/artworks/6565?fields=date_end", {
-    method: "GET",
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (object) {
-      document.getElementById("dateOne").innerText = object.data.date_end;
-    });
-
-  //Function that fetches the good description for the given id and the html element and returns an error in console when needed
+  //DESCRIPTION FUNCTION FETCH
   function fetchArtworkDescription(artworkId, elementId) {
     fetch(
       `https://api.artic.edu/api/v1/artworks/${artworkId}?fields=description`,
@@ -109,6 +51,73 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error fetching artwork description:", error);
       });
   }
-  //description for first image
-  console.log(fetchArtworkDescription(6565, "artworkOneLegend"));
+  //IMAGE FUNCTION FETCH
+  function fetchArtworkImage(artworkImageId, elementId) {
+    fetch(
+      `https://www.artic.edu/iiif/2/${artworkImageId}/full/843,/0/default.jpg
+      `,
+      {
+        method: "GET",
+      },
+    )
+      .then(function (response) {
+        document.getElementById(elementId).src = response.url;
+      })
+      .catch(function (error) {
+        console.error("Error fetching artwork", error);
+      });
+  }
+
+  //ALT FUNCTION FETCH
+  function fetchArtworkAlt(artworkImageId, elementId) {
+    fetch(
+      `https://api.artic.edu/api/v1/artworks/${artworkImageId}?fields=thumbnail`,
+      {
+        method: "GET",
+      },
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (object) {
+        document.getElementById(elementId).alt = object.data.thumbnail.alt_text;
+      })
+      .catch(function (error) {
+        console.error("Error fetching artwork", error);
+      });
+  }
+
+  //TITLE FUNCTION FETCH
+  function fetchArtworkTitle(artworkId, elementId) {
+    fetch(`https://api.artic.edu/api/v1/artworks/${artworkId}?fields=title`, {
+      method: "GET",
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (object) {
+        document.getElementById(elementId).innerText = object.data.title;
+      });
+  }
+
+  //DATE FUNCTION FETCH
+  function fetchArtworkDate(artworkId, elementId) {
+    fetch(
+      `https://api.artic.edu/api/v1/artworks/${artworkId}?fields=date_end`,
+      {
+        method: "GET",
+      },
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (object) {
+        document.getElementById(elementId).innerText = object.data.date_end;
+      });
+  }
+  //description, image, alt, date for first image
+  fetchArtworkDescription(6565, "artworkOneLegend");
+  fetchArtworkImage("b272df73-a965-ac37-4172-be4e99483637", "artworkOne");
+  fetchArtworkAlt(6565, "artworkOne");
+  fetchArtworkTitle(6565, "titleOne");
 });

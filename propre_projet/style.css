@@ -1,4 +1,5 @@
 .titlePage {
+  font-size: 30px;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -9,6 +10,7 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
+  text-decoration: none;
 }
 
 .artDisplay {

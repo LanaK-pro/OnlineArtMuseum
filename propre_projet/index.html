@@ -9,32 +9,40 @@
   <body>
     <nav>
       <ul>
-        <li><a href="#" onclick="reloadPage('option1')">Option 1</a></li>
-        <li><a href="#" onclick="reloadPage('option2')">Option 2</a></li>
-        <li><a href="#" onclick="reloadPage('option3')">Option 3</a></li>
+        <li><a href="#" data-page="option1">Option 1</a></li>
+        <li><a href="#" data-page="">Option 2</a></li>
+        <li><a href="#" data-page="">Option 3</a></li>
       </ul>
     </nav>
-    <h1 class="titlePage">Online Art Museum</h1>
-    <section class="artDisplay">
-      <article>
-        <img id="artworkOne" src="" alt="" />
-        <div class="info">
-          <h2 id="titleOne"></h2>
-          <legend id="artworkOneLegend"></legend>
-          <p id="date"></p>
-        </div>
-      </article>
-      <article>
-        <h2 id="titleTwo"></h2>
-        <img id="artworkTwo" src="" alt="" />
-        <legend id="artworkTwoLegend"></legend>
-      </article>
-      <article>
-        <h2 id="TitleTwo"></h2>
-        <img id="artworkThree" src="" alt="" />
-        <legend id="artworkThreeLegend"></legend>
-      </article>
-    </section>
+    <main>
+      <a href="#top" class="titlePage">Online Art Museum</a>
+      <section class="artDisplay">
+        <article>
+          <img id="artworkOne" src="" alt="" />
+          <div class="info">
+            <h1 id="titleOne"></h1>
+            <legend id="artworkOneLegend"></legend>
+            <p id="dateOne"></p>
+          </div>
+        </article>
+        <article>
+          <img id="artworkTwo" src="" alt="" />
+          <div class="info">
+            <h1 id="titleTwo"></h1>
+            <legend id="artworkTwoLegend"></legend>
+            <p id="dateTwo"></p>
+          </div>
+        </article>
+        <article>
+          <img id="artworkThree" src="" alt="" />
+          <div class="info">
+            <h1 id="titleThree"></h1>
+            <legend id="artworkThreeLegend"></legend>
+            <p id="dateThree"></p>
+          </div>
+        </article>
+      </section>
+    </main>
 
     <p class="credit">Made with the Art Institue of Chicago API</p>
     <script src="script.js"></script>

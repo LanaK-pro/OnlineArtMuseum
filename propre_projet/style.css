@@ -1,0 +1,10 @@
+img {
+  width: 30%;
+  height: 30%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

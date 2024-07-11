@@ -130,27 +130,4 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchArtworkAlt(111628, "artworkThree");
   fetchArtworkTitle(111628, "titleThree");
   fetchArtworkDate(111628, "dateThree");
-
-  //PAGE TWO
-
-  //description, image, alt, date for FOUR image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
-
-  //description, image, alt, date for FIVE image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
-
-  //description, image, alt, date for SIX image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
 });

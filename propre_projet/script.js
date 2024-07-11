@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const FIRST_LINK = document.getElementById("option1");
   const SECOND_LINK = document.getElementById("option2");
   const THIRD_LINK = document.getElementById("option3");
+  const SVG = document.getElementById("mysvg");
 
   //DESCRIPTION FUNCTION FETCH
   function fetchArtworkDescription(artworkId, elementId) {
@@ -112,4 +113,50 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchArtworkAlt(111628, "artworkThree");
   fetchArtworkTitle(111628, "titleThree");
   fetchArtworkDate(111628, "dateThree");
+
+  const ZOOMABLE_IMAGES = document.querySelectorAll(".zoomable");
+
+  ZOOMABLE_IMAGES.forEach((img) => {
+    img.addEventListener("click", function () {
+      const zoomedContainer = document.createElement("div");
+      zoomedContainer.classList.add("zoomed");
+
+      const zoomedImg = document.createElement("img");
+      zoomedImg.src = this.src;
+      zoomedImg.alt = this.alt;
+
+      zoomedContainer.appendChild(zoomedImg);
+      document.body.appendChild(zoomedContainer);
+
+      // Trigger reflow to ensure the transition works
+      zoomedContainer.offsetHeight;
+
+      // Add active class to start the transition
+      zoomedContainer.classList.add("active");
+
+      zoomedContainer.addEventListener("click", function () {
+        // Remove active class to start the out transition
+        this.classList.remove("active");
+
+        setTimeout(() => {
+          document.body.removeChild(this);
+        }, 300);
+      });
+    });
+  });
+
+  // Function to rotate SVG
+  function rotateSVG() {
+    // Get scroll position
+    const SCROLL_POSITION = window.scrollY;
+
+    // Calculate rotation
+    const ROTATION = SCROLL_POSITION * 0.1;
+
+    // Apply rotation to SVG
+    SVG.style.transform = `rotate(${ROTATION}deg)`;
+  }
+
+  // Add scroll event listener
+  window.addEventListener("scroll", rotateSVG);
 });

@@ -17,50 +17,75 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main>
+  <body id="pageTwo">
+    <main s>
       <nav class="transparent z-depth-0">
         <div class="nav-wrapper">
           <ul>
             <li>
-              <a href="index.html" id="option1" class="black-text">Option 1</a>
+              <a href="index.html" id="option1" class="black-text"
+                >American Art</a
+              >
             </li>
             <li>
-              <a href="page2.html" id="option2" class="black-text">Option 2</a>
+              <a href="page2.html" id="option2" class="black-text"
+                >French Impressionism</a
+              >
             </li>
             <li><a href="#" id="option3" class="black-text">Option 3</a></li>
           </ul>
         </div>
       </nav>
-
-      <a href="#top" class="titlePage">Online Art Museum</a>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="mysvg"
+          width="80"
+          height="80"
+          viewBox="0 -0.5 25 25"
+          fill="none"
+        >
+          <path
+            d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z"
+            fill="#000000"
+          />
+        </svg>
+        <a href="#top" class="titlePage">Online Art Museum</a>
+      </div>
       <section class="artDisplay">
-        <article>
-          <img id="artworkFour" src="" alt="" />
+        <article class="hoverable-artwork">
+          <div class="artwork-image, valign-wrapper">
+            <img id="artworkFour" src="" alt="" class="valign, zoomable" />
+          </div>
           <div class="info">
-            <h1 id="titleFour"></h1>
-            <legend id="artworkFourLegend"></legend>
+            <h1 id="titleFour" class="impressionism"></h1>
+            <legend id="artworkFourLegend" class="impressionismLegend"></legend>
             <p id="dateFour"></p>
           </div>
         </article>
-        <article>
-          <img id="artworkFive" src="" alt="" />
+        <article class="hoverable-artwork">
+          <div class="artwork-image, valign-wrapper">
+            <img id="artworkFive" src="" alt="" class="valign, zoomable" />
+          </div>
           <div class="info">
-            <h1 id="titleFive"></h1>
-            <legend id="artworkFiveLegend"></legend>
+            <h1 id="titleFive" class="impressionism"></h1>
+            <legend id="artworkFiveLegend" class="impressionismLegend"></legend>
             <p id="dateFive"></p>
           </div>
         </article>
-        <article>
-          <img id="artworkSix" src="" alt="" />
+        <article class="hoverable-artwork">
+          <div class="artwork-image, valign-wrapper">
+            <img id="artworkSix" src="" alt="" class="valign, zoomable" />
+          </div>
           <div class="info">
-            <h1 id="titleSix"></h1>
-            <legend id="artworkSixLegend"></legend>
+            <h1 id="titleSix" class="impressionism"></h1>
+            <legend id="artworkSixLegend" class="impressionismLegend"></legend>
             <p id="dateSix"></p>
           </div>
         </article>
       </section>
     </main>
+    <p class="credit">Made with the Art Institue of Chicago API</p>
     <footer>
       <div class="container">
         <div class="row">
@@ -69,7 +94,7 @@
             action="https://formspree.io/f/mjkbkbnp"
             method="POST"
           >
-            <h4 class="center-align">Contact Me</h4>
+            <h2 class="center-align">Contact Me</h2>
             <div class="row">
               <div class="input-field col s12">
                 <input
@@ -106,6 +131,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script2.js"></script>
+
     <script
       type="text/javascript"
       src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"

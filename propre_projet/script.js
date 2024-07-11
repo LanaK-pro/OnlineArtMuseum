@@ -3,24 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const SECOND_LINK = document.getElementById("option2");
   const THIRD_LINK = document.getElementById("option3");
 
-  /* barba.init({
-    transitions: [
-      {
-        name: "opacity-transition",
-        leave(data) {
-          return gsap.to(data.current.container, {
-            opacity: 0,
-          });
-        },
-        enter(data) {
-          return gsap.from(data.next.container, {
-            opacity: 0,
-          });
-        },
-      },
-    ],
-  });*/
-
   //DESCRIPTION FUNCTION FETCH
   function fetchArtworkDescription(artworkId, elementId) {
     fetch(

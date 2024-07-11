@@ -88,10 +88,10 @@ html {
 .titlePageThree:hover {
   color: #f6a0a0;
   text-shadow:
-    -0.5px -0.5px 0 #4a3728,
-    0.5px -0.5px 0 #4a3728,
-    -0.5px 0.5px 0 #4a3728,
-    0.5px 0.5px 0 #4a3728;
+    -0.5px -0.5px 0 #9f9594,
+    0.5px -0.5px 0 #9f9594,
+    -0.5px 0.5px 0 #9f9594,
+    0.5px 0.5px 0 #9f9594;
 }
 .artDisplay {
   display: flex;
@@ -336,6 +336,7 @@ body #magicPointer {
   color: whitesmoke;
 }
 
+/* SVG BASE ID, did not change it */
 #Layer_2 {
   margin: 5px;
 }

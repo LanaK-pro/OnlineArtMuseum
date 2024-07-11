@@ -4,23 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const THIRD_LINK = document.getElementById("option3");
   const SVG = document.getElementById("mysvg");
 
-  /* barba.init({
-      transitions: [
-        {
-          name: "opacity-transition",
-          leave(data) {
-            return gsap.to(data.current.container, {
-              opacity: 0,
-            });
-          },
-          enter(data) {
-            return gsap.from(data.next.container, {
-              opacity: 0,
-            });
-          },
-        },
-      ],
-    });*/
+  options = {
+    hoverEffect: "circle-move",
+    hoverItemMove: false,
+    defaultCursor: false,
+    outerWidth: 30,
+    outerHeight: 30,
+  };
+  magicMouse(options);
 
   //DESCRIPTION FUNCTION FETCH
   function fetchArtworkDescription(artworkId, elementId) {

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function fetchArtworkImage(artworkImageId, elementId) {
     fetch(
       `https://www.artic.edu/iiif/2/${artworkImageId}/full/843,/0/default.jpg
-      `,
+          `,
       {
         method: "GET",
       },
@@ -102,26 +102,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  //description, image, alt, date for FIRST image
-  fetchArtworkDescription(6565, "artworkOneLegend");
-  fetchArtworkImage("b272df73-a965-ac37-4172-be4e99483637", "artworkOne");
-  fetchArtworkAlt(6565, "artworkOne");
-  fetchArtworkTitle(6565, "titleOne");
-  fetchArtworkDate(6565, "dateOne");
+  //image, alt, date for SEVEN image
+  fetchArtworkImage("b3974542-b9b4-7568-fc4b-966738f61d78", "artworkSeven");
+  fetchArtworkAlt(24645, "artworkSeven");
+  fetchArtworkTitle(24645, "titleSeven");
+  fetchArtworkDate(24645, "dateSeven");
 
-  //description, image, alt, date for SECOND image
-  fetchArtworkDescription(109439, "artworkTwoLegend");
-  fetchArtworkImage("e5d11520-96cd-8b62-06a9-6d16ddf8affd", "artworkTwo");
-  fetchArtworkAlt(109439, "artworkTwo");
-  fetchArtworkTitle(109439, "titleTwo");
-  fetchArtworkDate(109439, "dateTwo");
+  //image, alt, date for EIGHT image
+  fetchArtworkImage("779e2fe5-8df7-3128-1053-308ce977b688", "artworkEight");
+  fetchArtworkAlt(25006, "artworkEight");
+  fetchArtworkTitle(25006, "titleEight");
+  fetchArtworkDate(25006, "dateEight");
 
-  //description, image, alt, date for THIRD image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
+  //description, image, alt, date for NINE image
+  fetchArtworkDescription(102077, "artworkNineLegend");
+  fetchArtworkImage("c2e3c773-f443-810c-598f-d9d64481203b", "artworkNine");
+  fetchArtworkAlt(102077, "artworkNine");
+  fetchArtworkTitle(102077, "titleNine");
+  fetchArtworkDate(102077, "dateNine");
 
   const ZOOMABLE_IMAGES = document.querySelectorAll(".zoomable");
 
@@ -147,9 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Remove active class to start the out transition
         this.classList.remove("active");
 
+        // Wait for the transition to complete before removing the element
         setTimeout(() => {
           document.body.removeChild(this);
-        }, 300);
+        }, 300); // This should match the transition duration in CSS
       });
     });
   });

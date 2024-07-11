@@ -46,6 +46,28 @@ html {
     text-shadow 0.3s ease;
 }
 
+.titlePageThree {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  color: inherit;
+  text-decoration: none;
+  font-family: "Playwrite CU", cursive;
+  font-weight: 200;
+  margin-left: 10px;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
 .titlePage:hover {
   color: #d2b48c;
   text-shadow:
@@ -56,6 +78,15 @@ html {
 }
 .titlePageTwo:hover {
   color: #cdc9a4;
+  text-shadow:
+    -0.5px -0.5px 0 #4a3728,
+    0.5px -0.5px 0 #4a3728,
+    -0.5px 0.5px 0 #4a3728,
+    0.5px 0.5px 0 #4a3728;
+}
+
+.titlePageThree:hover {
+  color: #f6a0a0;
   text-shadow:
     -0.5px -0.5px 0 #4a3728,
     0.5px -0.5px 0 #4a3728,
@@ -133,11 +164,6 @@ h2 {
   font-size: 40px;
 }
 
-.hoverable-artwork {
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
 .artwork-image {
   position: relative;
   overflow: hidden;
@@ -156,14 +182,6 @@ h2 {
     0 5px 5px -3px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.hoverable-artwork:hover {
-  transform: scale(1.02);
-}
-
-.hoverable-artwork:hover .artwork-image::after {
-  opacity: 1;
 }
 
 #artworkOne {
@@ -268,4 +286,52 @@ body #magicPointer {
   position: fixed;
   margin: 0px;
   padding: 0px;
+}
+
+/* PAGE THREE */
+
+#artworkSeven {
+  height: 400px;
+  width: 600px;
+}
+#artworkEight {
+  height: 600px;
+  width: 300px;
+}
+
+#artworkNine {
+  height: 600px;
+  width: 400px;
+}
+.japan {
+  font-family: "Marcellus", serif;
+}
+
+#japanFlex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+  justify-content: flex-end;
+  align-items: center;
+}
+#titleEight {
+  margin-left: 30px;
+}
+
+.hoverable-artwork:hover {
+  transform: scale(1.02);
+}
+
+.hoverable-artwork:hover .artwork-image::after {
+  opacity: 1;
+}
+
+.hoverable-artwork {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#pageThree {
+  background-color: rgb(88, 25, 25);
+  color: whitesmoke;
 }

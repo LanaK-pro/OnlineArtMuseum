@@ -1,0 +1,13 @@
+body #magicMouseCursor {
+  border: 1px solid rgb(255, 255, 255) !important;
+}
+body #magicPointer {
+  background: rgb(255, 255, 255) !important;
+}
+* {
+  cursor: none !important;
+}
+
+.black-text {
+  color: #ffffff !important;
+}

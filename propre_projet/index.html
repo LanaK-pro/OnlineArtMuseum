@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Art Exposition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Inconsolata:wght@200..900&family=Oswald:wght@200..700&family=Playwrite+HU&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#" data-page="option1">Option 1</a></li>
-        <li><a href="#" data-page="">Option 2</a></li>
-        <li><a href="#" data-page="">Option 3</a></li>
-      </ul>
-    </nav>
-    <main>
+  <body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="home">
+      <nav>
+        <ul>
+          <li><a href="#" id="option1">Option 1</a></li>
+          <li><a href="page2.html" id="option2">Option 2</a></li>
+          <li><a href="#" id="option3">Option 3</a></li>
+        </ul>
+      </nav>
+
       <a href="#top" class="titlePage">Online Art Museum</a>
       <section class="artDisplay">
         <article>
@@ -42,9 +49,26 @@
           </div>
         </article>
       </section>
+
+      <p class="credit">Made with the Art Institue of Chicago API</p>
+
+     <!--<footer>
+        <form action="https://formspree.io/f/mjkbkbnp" method="POST">
+          <label>
+            Your email:
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>--> 
+      </footer>
     </main>
 
-    <p class="credit">Made with the Art Institue of Chicago API</p>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

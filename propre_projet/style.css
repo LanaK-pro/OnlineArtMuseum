@@ -10,7 +10,9 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
+  color: inherit;
   text-decoration: none;
+  font-family: "Abel", sans-serif;
 }
 
 .artDisplay {
@@ -29,9 +31,18 @@
   text-align: center;
 }
 
+h1 {
+  font-family: "Oswald", sans-serif;
+}
+
+legend {
+  font-family: "Inconsolata", monospace;
+}
+
 article {
   display: flex;
   justify-content: center;
+  margin-bottom: 130px;
 }
 
 img {
@@ -39,8 +50,36 @@ img {
   height: 30%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+#dateOne,
+#dateTwo,
+#dateThree,
+.credit {
+  font-family: "Abel", sans-serif;
+}
+nav ul li a,
+nav ul li {
+  color: inherit;
+  text-decoration: none;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+}
+
 nav ul {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+}
+[data-barba="container"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }

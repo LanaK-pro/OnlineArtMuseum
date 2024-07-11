@@ -4,22 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const THIRD_LINK = document.getElementById("option3");
 
   /* barba.init({
-    transitions: [
-      {
-        name: "opacity-transition",
-        leave(data) {
-          return gsap.to(data.current.container, {
-            opacity: 0,
-          });
+      transitions: [
+        {
+          name: "opacity-transition",
+          leave(data) {
+            return gsap.to(data.current.container, {
+              opacity: 0,
+            });
+          },
+          enter(data) {
+            return gsap.from(data.next.container, {
+              opacity: 0,
+            });
+          },
         },
-        enter(data) {
-          return gsap.from(data.next.container, {
-            opacity: 0,
-          });
-        },
-      },
-    ],
-  });*/
+      ],
+    });*/
 
   //DESCRIPTION FUNCTION FETCH
   function fetchArtworkDescription(artworkId, elementId) {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function fetchArtworkImage(artworkImageId, elementId) {
     fetch(
       `https://www.artic.edu/iiif/2/${artworkImageId}/full/843,/0/default.jpg
-      `,
+        `,
       {
         method: "GET",
       },
@@ -110,47 +110,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  //description, image, alt, date for FIRST image
-  fetchArtworkDescription(6565, "artworkOneLegend");
-  fetchArtworkImage("b272df73-a965-ac37-4172-be4e99483637", "artworkOne");
-  fetchArtworkAlt(6565, "artworkOne");
-  fetchArtworkTitle(6565, "titleOne");
-  fetchArtworkDate(6565, "dateOne");
-
-  //description, image, alt, date for SECOND image
-  fetchArtworkDescription(109439, "artworkTwoLegend");
-  fetchArtworkImage("e5d11520-96cd-8b62-06a9-6d16ddf8affd", "artworkTwo");
-  fetchArtworkAlt(109439, "artworkTwo");
-  fetchArtworkTitle(109439, "titleTwo");
-  fetchArtworkDate(109439, "dateTwo");
-
-  //description, image, alt, date for THIRD image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
-
-  //PAGE TWO
-
   //description, image, alt, date for FOUR image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
+  fetchArtworkDescription(111628, "artworkFourLegend");
+  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkFour");
+  fetchArtworkAlt(111628, "artworkFour");
+  fetchArtworkTitle(111628, "titleFour");
+  fetchArtworkDate(111628, "dateFour");
 
   //description, image, alt, date for FIVE image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
-
+  fetchArtworkDescription(111628, "artworkFiveLegend");
+  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkFive");
+  fetchArtworkAlt(111628, "artworkFive");
+  fetchArtworkTitle(111628, "titleFive");
+  fetchArtworkDate(111628, "dateFive");
+  
   //description, image, alt, date for SIX image
-  fetchArtworkDescription(111628, "artworkThreeLegend");
-  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkThree");
-  fetchArtworkAlt(111628, "artworkThree");
-  fetchArtworkTitle(111628, "titleThree");
-  fetchArtworkDate(111628, "dateThree");
+  fetchArtworkDescription(111628, "artworkSixLegend");
+  fetchArtworkImage("831a05de-d3f6-f4fa-a460-23008dd58dda", "artworkSix");
+  fetchArtworkAlt(111628, "artworkSix");
+  fetchArtworkTitle(111628, "titleSix");
+  fetchArtworkDate(111628, "dateSix");
 });

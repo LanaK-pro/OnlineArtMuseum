@@ -4,6 +4,8 @@ Project made by myself during a Javascript class in July 2024, first time using 
 
 **_[Online Art Exposition ](https://lanak-pro.github.io/OnlineArtMuseum/index.html)_**
 
+## You can visit the website by clicking on the navbar on top, clicking on the title brings you back to the top. Each section represents art movements that are or have been present at the Institute in Chicago
+
 Virtual art gallery made using the free and [PUBLIC API](https://www.artic.edu/open-access/public-api) **made by the Art Institute of Chicago**, every API call is contained in a function therefore it was easier for me to exploit these ressources.
 
 Every icon is an SVG taken from [Svg Repo](https://www.svgrepo.com/) a free website for open licensed SVG.

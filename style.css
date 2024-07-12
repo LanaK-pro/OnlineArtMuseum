@@ -338,5 +338,17 @@ body #magicPointer {
 
 /* SVG BASE ID, did not change it */
 #Layer_2 {
-  margin: 5px;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+/* #svgLink {
+  padding: 0px !important;
+  margin: 0px !important; */
+
+#svgLink {
+  padding-top: 15px;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
 }

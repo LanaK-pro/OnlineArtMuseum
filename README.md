@@ -1,10 +1,10 @@
-# Hello !
+# Hello ! Bonjour ! 😌🇫🇷
 
 Project made by myself during a Javascript class in July 2024, first time using javascript for an entire website. Outside of small scripts made for school.
 
-Virtual art gallery made using the free and **public API made by the Art Institute of Chicago**, every API call is contained in a function therefore it was easier for me to exploit these ressources.
+**_[Online Art Exposition ](https://lanak-pro.github.io/OnlineArtMuseum/index.html)_**
 
-https://www.artic.edu/open-access/public-api
+Virtual art gallery made using the free and [PUBLIC API](https://www.artic.edu/open-access/public-api)**public API made by the Art Institute of Chicago**, every API call is contained in a function therefore it was easier for me to exploit these ressources.
 
 Every icon is an SVG taken from [SVG REPO](https://www.svgrepo.com/) a free website for open licensed SVG.
 
